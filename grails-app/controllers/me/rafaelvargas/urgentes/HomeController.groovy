@@ -7,11 +7,12 @@ class HomeController {
     def index() {
 		
 		def dias = 0
-		def urgentes = Urgente.list([sort:"dateCreated",order:"desc"])
+		def urgentes = Urgente.list(sort:"dateCreated",order:"desc",readOnly:true)
+		
 		def ultimaOcurrencia
 		
 		if(urgentes.empty)	ultimaOcurrencia = new Date().parse("dd-MM-yyyy","24-04-2013")
-		else	ultimaOcurrencia = urgentes?.first()?.dateCreated?.clearTime() 
+		else	ultimaOcurrencia = urgentes?.first()?.dateCreated?.clearTime()
 		
 		dias = new Date().clearTime() - ultimaOcurrencia
 		
