@@ -3,7 +3,7 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8">
-		<title>Urgentes</title>
+		<title>Absurdos</title>
 		<%-- <meta name="description" content="">
 		<meta name="author" content=""> --%>
 
@@ -37,17 +37,7 @@
 						<span class="icon-bar"></span>
 					</a>
 					
-					<a class="brand" href="${createLink(uri: '/')}">Urgentes</a>
-
-					<div class="nav-collapse">
-						<ul class="nav">
-							<sec:ifAllGranted roles="ROLE_ADMIN">
-								<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-									<li<%= c.logicalPropertyName == controllerName ? ' class="active"' : '' %>><g:link controller="${c.logicalPropertyName}"><g:message code="${c.logicalPropertyName + '.label'}" default="${c.naturalName.replaceAll(' Controller','')}" /></g:link></li>
-								</g:each>
-							</sec:ifAllGranted>
-						</ul>
-					</div>
+					<a class="brand" href="${createLink(uri: '/')}">Absurdos</a>
 				</div>
 			</div>
 		</nav>
