@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="hero-unit">
 				<h1 class="pagination-centered">Días sin peticiones absurdas</h1>
-				<h1 class="pagination-centered"><g:formatNumber number="${dias}" minIntegerDigits="3" /></h1>
+				<h1 class="pagination-centered">${dias}</h1>
 			</div>
 			
 			<sec:ifLoggedIn>
